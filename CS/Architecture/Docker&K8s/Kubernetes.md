@@ -14,6 +14,9 @@
       - [01 kube-apiserver](#01-kube-apiserver)
       - [02 ETCD](#02-etcd)
       - [03 kube-controller-manager](#03-kube-controller-manager)
+      - [01 kube-apiserver](#01-kube-apiserver-1)
+      - [02 ETCD](#02-etcd-1)
+      - [03 kube-controller-manager](#03-kube-controller-manager-1)
       - [04 cloud-controller-manager](#04-cloud-controller-manager)
       - [05 kube-scheduler](#05-kube-scheduler)
       - [06 addons](#06-addons)
@@ -28,9 +31,6 @@
       - [04 supervisord](#04-supervisord)
       - [05 fluentd](#05-fluentd)
   - [运行应用的步骤](#运行应用的步骤)
-      - [03 docker](#03-docker)
-      - [04 supervisord](#04-supervisord)
-      - [05 fluentd](#05-fluentd)
 
 <!-- /code_chunk_output -->
 
@@ -152,11 +152,3 @@ graph TB;
 
     命中移动目标：容器可能由于节点失败、为其他容器的运行释放资源等原因被迁移。如果容器向运行在集群中的其他容器或者外部客户端提供服务。当容器被频繁调度时，客户端如何连接到提供服务的容器。
     实现：告知k8s哪些容器提供相同的服务，k8s将通过一个静态的ip地址暴露所有容器，将改地址暴露给客户端。kube-proxy将确保到服务的连接可跨提供服务的容器实现负载均衡。
-    
-    运行在Node，提供k8s运行时环境，以及维护pod
-#### 01 kubelet
-    主要的节点代理，监视已分配给节点的pod
-#### 02 kube-proxy
-#### 03 docker
-#### 04 supervisord
-#### 05 fluentd

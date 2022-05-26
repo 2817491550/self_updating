@@ -27,7 +27,7 @@
     - [2. Node组件](#2-node组件)
       - [01 kubelet](#01-kubelet)
       - [02 kube-proxy](#02-kube-proxy)
-      - [03 docker、rtx](#03-dockerrtx)
+      - [03 docker、rtx](#03-docker-rtx)
       - [04 supervisord](#04-supervisord)
       - [05 fluentd](#05-fluentd)
   - [运行应用的步骤](#运行应用的步骤)
